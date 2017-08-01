@@ -21,7 +21,7 @@ ENV PACKAGES="\
 ENV PIP_PACKAGES="\
   dateparser \
   pandas \
-  whois \
+  python-whois \
   requests \
   numpy==1.11.0 \
   scipy==0.18.0 \
