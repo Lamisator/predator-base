@@ -53,4 +53,4 @@ RUN echo \
   && apk del curl g++ make musl-dev libc-dev git gcc build-base openblas-dev gfortran libc-utils --no-cache
 
 ENTRYPOINT ["/usr/bin/dumb-init"]
-CMD /bin/bash
+CMD /usr/bin/python
