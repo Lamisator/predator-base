@@ -15,7 +15,9 @@ ENV PACKAGES="\
   ca-certificates \
   python3.4 \
   python3.4-dev \
+  openblas \
   openblas-dev \
+  libstdc++ \
 "
 
 ENV PIP_PACKAGES="\
