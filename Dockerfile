@@ -28,6 +28,9 @@ ENV PIP_PACKAGES="\
   numpy==1.11.0 \
   scipy==0.18.0 \
   scikit-learn==0.18.1 \
+  progressbar \
+  blessings \
+  pyasn \
 "
 
 
