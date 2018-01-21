@@ -32,7 +32,6 @@ ENV PIP_PACKAGES="\
   blessings \
   pyasn \
   editdistance \
-  pickle \
 "
 
 
