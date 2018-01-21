@@ -31,6 +31,8 @@ ENV PIP_PACKAGES="\
   progressbar33 \
   blessings \
   pyasn \
+  editdistance \
+  pickles \
 "
 
 
