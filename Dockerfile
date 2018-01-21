@@ -13,8 +13,8 @@ ENV PACKAGES="\
   g++ \
   curl\
   ca-certificates \
-  python3.4 \
-  python3.4-dev \
+  python3 \
+  python3 \
   openblas \
   openblas-dev \
   libstdc++ \
@@ -43,16 +43,8 @@ RUN echo \
   && echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories \
   # Install all the stuff we need for running AND compiling
   && apk add --no-cache $PACKAGES \
-  && if [[ ! -e /usr/bin/python ]];        then ln -sf /usr/bin/python3.4 /usr/bin/python; fi \
-  && if [[ ! -e /usr/bin/python3 ]];        then ln -sf /usr/bin/python3.4 /usr/bin/python3; fi \
-  && if [[ ! -e /usr/bin/python-config ]]; then ln -sf /usr/bin/python3.4-config /usr/bin/python-config; fi \
-  && if [[ ! -e /usr/bin/idle ]];          then ln -sf /usr/bin/idle3.4 /usr/bin/idle; fi \
-  && if [[ ! -e /usr/bin/pydoc ]];         then ln -sf /usr/bin/pydoc3.4 /usr/bin/pydoc; fi \
-  && if [[ ! -e /usr/bin/easy_install ]];  then ln -sf /usr/bin/easy_install-3.4 /usr/bin/easy_install; fi \
   # Install and upgrade Pip
-  && easy_install pip \
-  && pip install --upgrade pip \
-  && if [[ ! -e /usr/bin/pip ]]; then ln -sf /usr/bin/pip3.4 /usr/bin/pip; fi \
+  && pip3 install --upgrade pip \
   && ln -s /usr/include/locale.h /usr/include/xlocale.h \
   # Install and compile modules
   && pip3 install $PIP_PACKAGES \
